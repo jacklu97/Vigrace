@@ -1,0 +1,62 @@
+
+#btn{
+    z-index: 3;
+    margin-left: 1em;
+    margin-top: 1em;
+    padding: 10px;
+    position: fixed;
+    color: white;
+    background: rgba(204,204,204,0.2);
+    align-content: center;
+    text-align: center;
+  }
+
+.values{
+    background: none;
+    border: none;
+    color: white;
+    text-align: right;
+    display: inline;
+    width: 20px;
+}
+
+.close {
+    position: absolute;
+    right: 22px;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+    opacity: 0.3;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 20px;
+    content: ' ';
+    height: 17px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  
+
+p{
+    display: inline;
+}
+
+input{
+    display: block;
+    
+}
+
+label{
+    display: block;
+}
+
