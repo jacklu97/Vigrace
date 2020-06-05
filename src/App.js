@@ -139,7 +139,7 @@ class App extends React.Component {
       graph: ForceGraph3D()(elem).graphData(gData).nodeLabel('country').nodeResolution(200).linkResolution(200).linkWidth(2).backgroundColor('gray')
       .nodeColor(() => this.state.colors[this.state.currentId-1]).onNodeClick(node => this.setCurrentNode(node)).onNodeHover(node => elem.style.cursor = node ? 'pointer' : null)
       .nodeVal( node => {parseInt(this.state.nodesSizes[this.state.currentId-1][node.id])})
-    })
+    }, ()=> console.log(this.state))
   }
 
   getRandomColor() {
@@ -221,7 +221,7 @@ class App extends React.Component {
             linkSize={this.changeLinkSize.bind(this) }/> 
           : null} */}
         
-        <div className="Grafo" id="3d-graph"></div>
+        <div className="Grafo" id="3d-graph">{this.state.graph}</div>
       </div>
     )
   }
