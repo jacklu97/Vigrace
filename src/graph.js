@@ -35,18 +35,21 @@ class Graph extends React.Component {
         let sizes = Array.apply(null, {length: maxId}).map(() => Array.apply(null, {length: 7}).map(() => 4))
         let graphs = []
         let colors = []
-        for(let i = 1; i<maxId+1; i++){
+        for(let i = 1; i<=maxId; i++){
             let color= this.getRandomColor()
             colors.push(color)
             graphs.push(
                 <ForceGraph3D 
-                graphData={data[this.state.currentId]}
+                graphData={data[i]}
                 nodeResolution={200}
                 backgroundColor={"grey"}
                 nodeColor={() => color}
                 nodeLabel={"country"} 
                 onNodeClick={node => this.setCurrentNode(node)}
-                onNodeHover={ node => elem.style.cursor = node ? 'pointer' : null}/>
+                onNodeHover={ node => elem.style.cursor = node ? 'pointer' : null}
+                linkWidth={2}
+                linkResolution={200}
+                onLinkHover={ link => elem.style.cursor = link ? 'pointer' : null }/>
             )
         }
         this.setState({
@@ -94,8 +97,11 @@ class Graph extends React.Component {
                   nodeVal={(nod)=> sizes[this.state.currentId-1][nod.id]}
                   nodeColor={() => this.state.colors[this.state.currentId-1]}
                   nodeLabel={"country"} 
-                  onNodeClick={node => this.setCurrentNode(node)}
-                  onNodeHover={ node => elem.style.cursor = node ? 'pointer' : null}/>
+                  onNodeClick={nod => this.setCurrentNode(nod)}
+                  onNodeHover={ nod => elem.style.cursor = nod ? 'pointer' : null}
+                  linkWidth={2}
+                  linkResolution={200}
+                  onLinkHover={ link => elem.style.cursor = link ? 'pointer' : null }/>
 
         graphs[this.state.currentId-1] = graph
 

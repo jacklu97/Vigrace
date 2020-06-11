@@ -11,6 +11,8 @@
 # production
 /build
 
+*.xlsx
+
 # misc
 .DS_Store
 .env.local
