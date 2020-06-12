@@ -7,7 +7,7 @@ import "react-input-range/lib/css/index.css";
 
 import Controller from './controller';
 
-import data from './data.json'
+import data from './data2.json'
 
 class Graph extends React.Component {
     constructor(props){
@@ -44,7 +44,8 @@ class Graph extends React.Component {
                 nodeResolution={200}
                 backgroundColor={"grey"}
                 nodeColor={() => color}
-                nodeLabel={"country"} 
+                nodeLabel={"name"} 
+                nodeVal={() => 4}
                 onNodeClick={node => this.setCurrentNode(node)}
                 onNodeHover={ node => elem.style.cursor = node ? 'pointer' : null}
                 linkWidth={2}
@@ -96,7 +97,7 @@ class Graph extends React.Component {
                   backgroundColor={"grey"}
                   nodeVal={(nod)=> sizes[this.state.currentId-1][nod.id]}
                   nodeColor={() => this.state.colors[this.state.currentId-1]}
-                  nodeLabel={"country"} 
+                  nodeLabel={"name"} 
                   onNodeClick={nod => this.setCurrentNode(nod)}
                   onNodeHover={ nod => elem.style.cursor = nod ? 'pointer' : null}
                   linkWidth={2}

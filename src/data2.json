@@ -1,0 +1,364 @@
+{
+    "1": {
+        "nodes": [
+            {
+                "id": "F3",
+                "name": "F3",
+                "fx": "-4.72647",
+                "fy": "6.94583",
+                "fz": "4.29259"
+            },
+            {
+                "id": "F4",
+                "name": "F4",
+                "fx": "4.72647",
+                "fy": "6.94583",
+                "fz": "4.29259"
+            },
+            {
+                "id": "FZ",
+                "name": "FZ",
+                "fx": "0",
+                "fy": "3.89585",
+                "fz": "8.14682"
+            },
+            {
+                "id": "C3",
+                "name": "C3",
+                "fx": "-6.20327",
+                "fy": "0.279191",
+                "fz": "5.88833"
+            },
+            {
+                "id": "C4",
+                "name": "C4",
+                "fx": "6.20327",
+                "fy": "0.279191",
+                "fz": "5.88833"
+            },
+            {
+                "id": "CZ",
+                "name": "CZ",
+                "fx": "0",
+                "fy": "0.86423",
+                "fz": "8.7"
+            },
+            {
+                "id": "P3",
+                "name": "P3",
+                "fx": "-4.81515",
+                "fy": "-6.89084",
+                "fz": "3.53716"
+            },
+            {
+                "id": "P4",
+                "name": "P4",
+                "fx": "4.81515",
+                "fy": "-6.89084",
+                "fz": "3.53716"
+            },
+            {
+                "id": "PZ",
+                "name": "PZ",
+                "fx": "0",
+                "fy": "-5.62431",
+                "fz": "7.10652"
+            }
+        ],
+        "links": [
+            {
+                "target": "F3",
+                "source": "C4"
+            },
+            {
+                "target": "F3",
+                "source": "CZ"
+            },
+            {
+                "target": "F3",
+                "source": "P3"
+            },
+            {
+                "target": "F3",
+                "source": "PZ"
+            },
+            {
+                "target": "F4",
+                "source": "C3"
+            },
+            {
+                "target": "F4",
+                "source": "C4"
+            },
+            {
+                "target": "F4",
+                "source": "CZ"
+            },
+            {
+                "target": "F4",
+                "source": "P3"
+            },
+            {
+                "target": "F4",
+                "source": "P4"
+            },
+            {
+                "target": "F4",
+                "source": "PZ"
+            },
+            {
+                "target": "FZ",
+                "source": "C3"
+            },
+            {
+                "target": "FZ",
+                "source": "C4"
+            },
+            {
+                "target": "FZ",
+                "source": "P4"
+            },
+            {
+                "target": "FZ",
+                "source": "PZ"
+            },
+            {
+                "target": "C3",
+                "source": "C4"
+            },
+            {
+                "target": "C3",
+                "source": "CZ"
+            },
+            {
+                "target": "C3",
+                "source": "P3"
+            },
+            {
+                "target": "C3",
+                "source": "P4"
+            },
+            {
+                "target": "C3",
+                "source": "PZ"
+            },
+            {
+                "target": "C4",
+                "source": "CZ"
+            },
+            {
+                "target": "C4",
+                "source": "P3"
+            },
+            {
+                "target": "C4",
+                "source": "P4"
+            },
+            {
+                "target": "C4",
+                "source": "PZ"
+            },
+            {
+                "target": "CZ",
+                "source": "P3"
+            },
+            {
+                "target": "CZ",
+                "source": "PZ"
+            },
+            {
+                "target": "P3",
+                "source": "P4"
+            },
+            {
+                "target": "P3",
+                "source": "PZ"
+            },
+            {
+                "target": "P4",
+                "source": "PZ"
+            }
+        ]
+    },
+    "2": {
+        "nodes": [
+            {
+                "id": "F3",
+                "name": "F3",
+                "fx": "-4.72647",
+                "fy": "6.94583",
+                "fz": "4.29259"
+            },
+            {
+                "id": "F4",
+                "name": "F4",
+                "fx": "4.72647",
+                "fy": "6.94583",
+                "fz": "4.29259"
+            },
+            {
+                "id": "FZ",
+                "name": "FZ",
+                "fx": "0",
+                "fy": "3.89585",
+                "fz": "8.14682"
+            },
+            {
+                "id": "C3",
+                "name": "C3",
+                "fx": "-6.20327",
+                "fy": "0.279191",
+                "fz": "5.88833"
+            },
+            {
+                "id": "C4",
+                "name": "C4",
+                "fx": "6.20327",
+                "fy": "0.279191",
+                "fz": "5.88833"
+            },
+            {
+                "id": "CZ",
+                "name": "CZ",
+                "fx": "0",
+                "fy": "0.86423",
+                "fz": "8.7"
+            },
+            {
+                "id": "P3",
+                "name": "P3",
+                "fx": "-4.81515",
+                "fy": "-6.89084",
+                "fz": "3.53716"
+            },
+            {
+                "id": "P4",
+                "name": "P4",
+                "fx": "4.81515",
+                "fy": "-6.89084",
+                "fz": "3.53716"
+            },
+            {
+                "id": "PZ",
+                "name": "PZ",
+                "fx": "0",
+                "fy": "-5.62431",
+                "fz": "7.10652"
+            }
+        ],
+        "links": [
+            {
+                "target": "F3",
+                "source": "C4"
+            },
+            {
+                "target": "F3",
+                "source": "CZ"
+            },
+            {
+                "target": "F3",
+                "source": "P3"
+            },
+            {
+                "target": "F3",
+                "source": "PZ"
+            },
+            {
+                "target": "F4",
+                "source": "C3"
+            },
+            {
+                "target": "F4",
+                "source": "C4"
+            },
+            {
+                "target": "F4",
+                "source": "CZ"
+            },
+            {
+                "target": "F4",
+                "source": "P3"
+            },
+            {
+                "target": "F4",
+                "source": "P4"
+            },
+            {
+                "target": "F4",
+                "source": "PZ"
+            },
+            {
+                "target": "FZ",
+                "source": "C3"
+            },
+            {
+                "target": "FZ",
+                "source": "C4"
+            },
+            {
+                "target": "FZ",
+                "source": "P4"
+            },
+            {
+                "target": "FZ",
+                "source": "PZ"
+            },
+            {
+                "target": "C3",
+                "source": "C4"
+            },
+            {
+                "target": "C3",
+                "source": "CZ"
+            },
+            {
+                "target": "C3",
+                "source": "P3"
+            },
+            {
+                "target": "C3",
+                "source": "P4"
+            },
+            {
+                "target": "C3",
+                "source": "PZ"
+            },
+            {
+                "target": "C4",
+                "source": "CZ"
+            },
+            {
+                "target": "C4",
+                "source": "P3"
+            },
+            {
+                "target": "C4",
+                "source": "P4"
+            },
+            {
+                "target": "C4",
+                "source": "PZ"
+            },
+            {
+                "target": "CZ",
+                "source": "P3"
+            },
+            {
+                "target": "CZ",
+                "source": "PZ"
+            },
+            {
+                "target": "P3",
+                "source": "P4"
+            },
+            {
+                "target": "P3",
+                "source": "PZ"
+            },
+            {
+                "target": "P4",
+                "source": "PZ"
+            }
+        ]
+    }
+}
