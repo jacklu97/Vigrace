@@ -32,7 +32,7 @@ class Graph extends React.Component {
         let elem = document.getElementById("3dgraph")
         let keys = Object.keys(data)
         let maxId = parseInt(keys[keys.length-1])
-        let sizes = Array.apply(null, {length: maxId}).map(() => Array.apply(null, {length: 7}).map(() => 4))
+        let sizes = Array.apply(null, {length: maxId}).map(() => Array.apply(null, {length: 9}).map(() => 4))
         let graphs = []
         let colors = []
         for(let i = 1; i<=maxId; i++){
@@ -45,6 +45,7 @@ class Graph extends React.Component {
                 backgroundColor={"grey"}
                 nodeColor={() => color}
                 nodeLabel={"name"} 
+                showNavInfo={true}
                 nodeVal={() => 4}
                 onNodeClick={node => this.setCurrentNode(node)}
                 onNodeHover={ node => elem.style.cursor = node ? 'pointer' : null}
@@ -132,7 +133,7 @@ class Graph extends React.Component {
 
     render(){
         return(
-            <div>
+            <div style={{margin: "0"}}>
                 <div className="sliderContainer">
                     <h4>Momentos</h4>
                     <InputRange 
@@ -153,7 +154,7 @@ class Graph extends React.Component {
                         size = {this.state.nodesSizes[this.state.currentId-1][this.state.selectedNode.id]}/> 
                     : null}
 
-                <div id="3dgraph">{this.state.graphs[this.state.currentId-1]}</div>
+                <div style={{height: "100%"}} id="3dgraph">{this.state.graphs[this.state.currentId-1]}</div>
                 
             </div>
         )
