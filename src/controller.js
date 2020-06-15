@@ -15,7 +15,7 @@ function Controller(props){
             <p><input id="linkValue" className="values" defaultValue="2"></input>px</p>
             <label htmlFor="">Nodo seleccionado</label>
             <p>
-              {props.selectedNode !== null ? props.selectedNode["country"] : ""}
+              {props.selectedNode !== null ? props.selectedNode["name"] : ""}
             </p>
 
           </div>

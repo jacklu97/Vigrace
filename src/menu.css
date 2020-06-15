@@ -1,0 +1,22 @@
+.button-as-link{
+    background: none;
+    border: none;
+}
+
+li .button-as-link{
+    margin-left: 1em;
+}
+
+.actions{
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 10px 0px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.actions:hover{
+    text-decoration: underline;
+}
