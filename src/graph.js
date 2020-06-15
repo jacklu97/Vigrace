@@ -1,6 +1,6 @@
 import React from 'react'
 import ForceGraph3D from 'react-force-graph-3d';
-// import * as THREE from 'three';
+import * as THREE from 'three';
 import $ from 'jquery';
 import InputRange from 'react-input-range';
 import './App.css';
@@ -13,6 +13,7 @@ import InputFile from './inputFile';
 class Graph extends React.Component {
   constructor(props) {
     super(props)
+    this.fgRef = React.createRef()
     this.state = {
       data: null,
       showController: false,
@@ -50,24 +51,32 @@ class Graph extends React.Component {
     let WIDTH = $(document).width();
     let HEIGHT = $(document).height();
 
+    const planeGeometry = new THREE.PlaneGeometry(1000, 1000, 1, 1);
+    const planeMaterial = new THREE.MeshLambertMaterial({color: 0xFF0000, side: THREE.DoubleSide});
+    const mesh = new THREE.Mesh(planeGeometry, planeMaterial);
+    mesh.position.set(-100, -200, -100);
+    mesh.rotation.set(0.5 * Math.PI, 0, 0);
+
     for (let i = 1; i <= maxId; i++) {
       let color = this.getRandomColor()
       colors.push(color)
       let graph = <ForceGraph3D
-        graphData={this.state.data[i]}
-        nodeResolution={200}
-        backgroundColor={"grey"}
-        nodeColor={() => color}
-        nodeLabel={"name"}
-        showNavInfo={true}
-        width={WIDTH}
-        height={HEIGHT}
-        nodeRelSize={4}
-        onNodeClick={node => this.setCurrentNode(node)}
-        onNodeHover={node => elem.style.cursor = node ? 'pointer' : null}
-        linkWidth={2}
-        linkResolution={200}
-        onLinkHover={link => elem.style.cursor = link ? 'pointer' : null} />
+      graphData={this.state.data[i]}
+      ref={this.fgRef}
+      nodeResolution={200}
+      backgroundColor={"grey"}
+      nodeColor={() => color}
+      nodeLabel={"name"}
+      showNavInfo={true}
+      width={WIDTH}
+      height={HEIGHT}
+      nodeRelSize={4}
+      onNodeClick={node => this.setCurrentNode(node)}
+      onNodeHover={node => elem.style.cursor = node ? 'pointer' : null}
+      linkWidth={2}
+      linkResolution={200}
+      onLinkHover={link => elem.style.cursor = link ? 'pointer' : null} />
+      
 
       graphs.push(
         graph
