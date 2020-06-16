@@ -17,6 +17,7 @@ function Menu(props){
                         </button>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <button onClick={() => props.uploadFile()} className="button-as-link actions">Cargar JSON</button>
+                            <button className="button-as-link actions">Capturar imagen</button>
                             <button onClick={() => props.exit()} className="button-as-link actions">Salir</button>
                         </div>
                     </li>
@@ -24,8 +25,11 @@ function Menu(props){
                 {props.showPlayControls ? 
                     <div className="playControler">
                         <button onClick={() => props.resetMoments()}><i className="fa fa-fast-backward"></i></button>
+                        <button onClick={() => props.stepMoment(-1)}><i className="fa fa-step-backward"></i></button>
                         <button onClick={() => props.playMoments()}><i className="fa fa-play"></i></button>
                         <button onClick={() => props.pauseMoments()}><i className="fa fa-pause"></i></button>
+                        <button onClick={() => props.stepMoment(1)}><i className="fa fa-step-forward"></i></button>
+                        <button onClick={() => props.lastMoment()}><i className="fa fa-fast-forward"></i></button>
                     </div>
                     : null
                 }

@@ -3,7 +3,6 @@ import React from 'react'
 import ForceGraph3D from 'react-force-graph-3d';
 import SpriteText from 'three-spritetext';
 import $ from 'jquery';
-import * as THREE from 'three'
 import InputRange from 'react-input-range';
 import './App.css';
 import "react-input-range/lib/css/index.css";
@@ -87,8 +86,9 @@ class Graph extends React.Component {
 
       let graph = <ForceGraph3D
       graphData={this.state.data[i]}
+      rendererConfig={{preserveDrawingBuffer: true}}
       nodeResolution={200}
-      backgroundColor={"grey"}
+      backgroundColor={"#919191"}
       nodeColor={() => color}
       nodeLabel={"name"}
       showNavInfo={true}
@@ -158,6 +158,7 @@ class Graph extends React.Component {
 
     let graph = <ForceGraph3D
       graphData={this.state.data[this.state.currentId]}
+      rendererConfig={{preserveDrawingBuffer: true}}
       nodeResolution={200}
       backgroundColor={"grey"}
       nodeVal={nod => sizes[this.state.currentId - 1][nod.id] }
@@ -234,6 +235,25 @@ class Graph extends React.Component {
     })
   }
 
+  stepMoment = (args) =>{
+    let currentId = this.state.currentId + args
+    if(currentId > this.state.maxId){
+      currentId = this.state.maxId
+    }
+    else if(currentId === 0){
+      currentId = 1
+    }
+    this.setState({
+      currentId: currentId
+    })
+  }
+
+  lastMoment = () =>{
+    this.setState({
+      currentId: this.state.maxId
+    })
+  }
+
   render() {
     return (
       <div style={{ margin: "0" }}>
@@ -243,7 +263,9 @@ class Graph extends React.Component {
           showPlayControls={this.state.data ? true : false}
           playMoments={this.playMoments.bind(this)}
           pauseMoments={this.pauseMoments.bind(this)}
-          resetMoments = {this.resetMoments.bind(this) }/>
+          resetMoments = {this.resetMoments.bind(this) }
+          stepMoment = {this.stepMoment.bind(this)}
+          lastMoment = {this.lastMoment.bind(this)}/>
         <InputFile setJson={this.setJsonFile.bind(this)} />
         {
           this.state.data ?
