@@ -23,7 +23,9 @@ class Graph extends React.Component {
       nodesSizes: [],
       colors: [],
       selectedNode: null,
-      graphs: []
+      graphs: [],
+      playMoments: false,
+      pauseMoments: false
     }
   }
 
@@ -182,10 +184,54 @@ class Graph extends React.Component {
     })
   }
 
+   playMoments = () =>{
+    this.setState({
+      playMoments: true
+    }, () => {
+      let currentId = this.state.currentId
+      let maxId = this.state.maxId
+      if(!this.state.pauseMoments && currentId<maxId){
+        currentId+=1
+        this.setState({
+          currentId
+        }, () =>{
+          setTimeout(()=>{
+            this.playMoments()
+          }, 2000)
+        })
+        
+      }
+      else{
+        this.setState({
+          pauseMoments: false
+        })
+      }
+    })
+  }
+
+  pauseMoments = () =>{
+    this.setState({
+      playMoments: false,
+      pauseMoments: true
+    })
+  }
+
+  resetMoments = () =>{
+    this.setState({
+      currentId: 1
+    })
+  }
+
   render() {
     return (
       <div style={{ margin: "0" }}>
-        <Menu uploadFile={this.chooseJsonFile.bind(this)} exit={this.props.exit} />
+        <Menu 
+          uploadFile={this.chooseJsonFile.bind(this)} 
+          exit={this.props.exit} 
+          showPlayControls={this.state.data ? true : false}
+          playMoments={this.playMoments.bind(this)}
+          pauseMoments={this.pauseMoments.bind(this)}
+          resetMoments = {this.resetMoments.bind(this) }/>
         <InputFile setJson={this.setJsonFile.bind(this)} />
         {
           this.state.data ?
