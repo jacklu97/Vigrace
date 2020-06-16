@@ -22,11 +22,11 @@ function Menu(props){
                     </li>
                 </ul>
                 {props.showPlayControls ? 
-                    <React.Fragment>
+                    <div className="playControler">
                         <button onClick={() => props.resetMoments()}><i className="fa fa-fast-backward"></i></button>
                         <button onClick={() => props.playMoments()}><i className="fa fa-play"></i></button>
                         <button onClick={() => props.pauseMoments()}><i className="fa fa-pause"></i></button>
-                    </React.Fragment>
+                    </div>
                     : null
                 }
             </div>

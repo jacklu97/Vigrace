@@ -1,7 +1,9 @@
 // Librerias propias de npm
 import React from 'react'
 import ForceGraph3D from 'react-force-graph-3d';
+import SpriteText from 'three-spritetext';
 import $ from 'jquery';
+import * as THREE from 'three'
 import InputRange from 'react-input-range';
 import './App.css';
 import "react-input-range/lib/css/index.css";
@@ -97,7 +99,9 @@ class Graph extends React.Component {
       onNodeHover={node => elem.style.cursor = node ? 'pointer' : null}
       linkWidth={link => 5*link.width}
       linkResolution={200}
-      onLinkHover={link => elem.style.cursor = link ? 'pointer' : null} />
+      onLinkHover={link => elem.style.cursor = link ? 'pointer' : null} 
+      nodeThreeObjectExtend={nod => true}
+      nodeThreeObject={(nod) => this.addSpriteText(nod)}/>
       
       graphs.push(
         graph
@@ -108,9 +112,16 @@ class Graph extends React.Component {
       nodesSizes: sizes,
       graphs,
       maxId
-    }, () => console.log(this.state))
+    })
   }
 
+  addSpriteText(node){
+    const sprite = new SpriteText(node.name);
+    sprite.color = '#fff';
+    sprite.textHeight = 7;
+    sprite.position.set(0,12,0);
+    return sprite;
+}
 
   getRandomColor = () => {
     let letters = '0123456789ABCDEF';
@@ -203,7 +214,8 @@ class Graph extends React.Component {
       }
       else{
         this.setState({
-          pauseMoments: false
+          pauseMoments: false,
+          playMoments: false
         })
       }
     })
@@ -236,7 +248,6 @@ class Graph extends React.Component {
         {
           this.state.data ?
             <div className="sliderContainer">
-              <h4>Momentos</h4>
               <InputRange
                 onChange={value => this.setState({ currentId: value })}
                 value={this.state.currentId}
