@@ -68,115 +68,143 @@
         "links": [
             {
                 "target": 2,
-                "source": 5
+                "source": 5,
+                "width": 0.39576
             },
             {
                 "target": 2,
-                "source": 17
+                "source": 17,
+                "width": 0.521002
             },
             {
                 "target": 2,
-                "source": 6
+                "source": 6,
+                "width": 0.930291
             },
             {
                 "target": 2,
-                "source": 18
+                "source": 18,
+                "width": 0.847929
             },
             {
                 "target": 3,
-                "source": 4
+                "source": 4,
+                "width": 0.47968
             },
             {
                 "target": 3,
-                "source": 5
+                "source": 5,
+                "width": 0.850638
             },
             {
                 "target": 3,
-                "source": 17
+                "source": 17,
+                "width": 0.91276
             },
             {
                 "target": 3,
-                "source": 6
+                "source": 6,
+                "width": 0.339313
             },
             {
                 "target": 3,
-                "source": 7
+                "source": 7,
+                "width": 1
             },
             {
                 "target": 3,
-                "source": 18
+                "source": 18,
+                "width": 0.689713
             },
             {
                 "target": 16,
-                "source": 4
+                "source": 4,
+                "width": 0.704027
             },
             {
                 "target": 16,
-                "source": 5
+                "source": 5,
+                "width": 0.599005
             },
             {
                 "target": 16,
-                "source": 7
+                "source": 7,
+                "width": 0.868125
             },
             {
                 "target": 16,
-                "source": 18
+                "source": 18,
+                "width": 0.928943
             },
             {
                 "target": 4,
-                "source": 5
+                "source": 5,
+                "width": 0.489729
             },
             {
                 "target": 4,
-                "source": 17
+                "source": 17,
+                "width": 0.869352
             },
             {
                 "target": 4,
-                "source": 6
+                "source": 6,
+                "width": 0.528643
             },
             {
                 "target": 4,
-                "source": 7
+                "source": 7,
+                "width": 0.973727
             },
             {
                 "target": 4,
-                "source": 18
+                "source": 18,
+                "width": 0.759564
             },
             {
                 "target": 5,
-                "source": 17
+                "source": 17,
+                "width": 0.536978
             },
             {
                 "target": 5,
-                "source": 6
+                "source": 6,
+                "width": 0.928358
             },
             {
                 "target": 5,
-                "source": 7
+                "source": 7,
+                "width": 0.584584
             },
             {
                 "target": 5,
-                "source": 18
+                "source": 18,
+                "width": 0.681884
             },
             {
                 "target": 17,
-                "source": 6
+                "source": 6,
+                "width": 0.872575
             },
             {
                 "target": 17,
-                "source": 18
+                "source": 18,
+                "width": 0.843418
             },
             {
                 "target": 6,
-                "source": 7
+                "source": 7,
+                "width": 0.685011
             },
             {
                 "target": 6,
-                "source": 18
+                "source": 18,
+                "width": 0.533611
             },
             {
                 "target": 7,
-                "source": 18
+                "source": 18,
+                "width": 0.718127
             }
         ]
     },

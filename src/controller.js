@@ -9,7 +9,7 @@ function Controller(props){
             <button onClick={() => props.hide()} className="close"></button>
             <label htmlFor="nodeSize">Nodes size</label>
             <input id="nodeSize" type="range" defaultValue={size} min="4" max="20" onChange={() =>  props.nodeSize(document.getElementById("nodeSize").value)}/>
-            <p><input id="nodeValue" className="values" defaultValue="4"></input>px</p>
+            <p><input id="nodeValue" className="values" defaultValue={size}></input>px</p>
             <label htmlFor="nodeSize">Links size</label>
             <input id="linkSize" type="range" defaultValue="2" min="2" max="10" onChange={() => props.linkSize(document.getElementById("linkSize").value)}/>
             <p><input id="linkValue" className="values" defaultValue="2"></input>px</p>

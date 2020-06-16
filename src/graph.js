@@ -1,11 +1,12 @@
+// Librerias propias de npm
 import React from 'react'
 import ForceGraph3D from 'react-force-graph-3d';
-import * as THREE from 'three';
 import $ from 'jquery';
 import InputRange from 'react-input-range';
 import './App.css';
 import "react-input-range/lib/css/index.css";
 
+// Componentes creados
 import Menu from './menu';
 import Controller from './controller';
 import InputFile from './inputFile';
@@ -13,7 +14,6 @@ import InputFile from './inputFile';
 class Graph extends React.Component {
   constructor(props) {
     super(props)
-    this.fgRef = React.createRef()
     this.state = {
       data: null,
       showController: false,
@@ -44,25 +44,45 @@ class Graph extends React.Component {
     let elem = document.getElementById("3dgraph")
     let keys = Object.keys(this.state.data)
     let maxId = parseInt(keys[keys.length - 1])
-    let sizes = Array.apply(null, { length: maxId }).map(() => Array.apply(null, { length: 9 }).map(() => 4))
+    let sizes = []
+    
+    for(let i= 1; i<=maxId; i++){
+      let hashMap = {}
+      this.state.data[i]["links"].forEach(link => {
+        if(link.target in hashMap){
+          hashMap[link.target] += 1
+        }
+        else{
+          hashMap[link.target] = 1
+        }
+      });
+      
+      this.state.data[i]["nodes"].forEach(node => {
+        if(node.id in hashMap){
+          hashMap[node.id] += 4
+        }
+        else{
+          hashMap[node.id] = 4
+        }
+      })
+
+      sizes.push(hashMap)
+    }
+
+    console.log(sizes)
+
     let graphs = []
     let colors = []
 
     let WIDTH = $(document).width();
     let HEIGHT = $(document).height();
 
-    const planeGeometry = new THREE.PlaneGeometry(1000, 1000, 1, 1);
-    const planeMaterial = new THREE.MeshLambertMaterial({color: 0xFF0000, side: THREE.DoubleSide});
-    const mesh = new THREE.Mesh(planeGeometry, planeMaterial);
-    mesh.position.set(-100, -200, -100);
-    mesh.rotation.set(0.5 * Math.PI, 0, 0);
-
     for (let i = 1; i <= maxId; i++) {
       let color = this.getRandomColor()
       colors.push(color)
+
       let graph = <ForceGraph3D
       graphData={this.state.data[i]}
-      ref={this.fgRef}
       nodeResolution={200}
       backgroundColor={"grey"}
       nodeColor={() => color}
@@ -70,14 +90,13 @@ class Graph extends React.Component {
       showNavInfo={true}
       width={WIDTH}
       height={HEIGHT}
-      nodeRelSize={4}
+      nodeVal={nod => sizes[this.state.currentId - 1][nod.id] }
       onNodeClick={node => this.setCurrentNode(node)}
       onNodeHover={node => elem.style.cursor = node ? 'pointer' : null}
-      linkWidth={2}
+      linkWidth={link => 5*link.width}
       linkResolution={200}
       onLinkHover={link => elem.style.cursor = link ? 'pointer' : null} />
       
-
       graphs.push(
         graph
       )
@@ -87,7 +106,7 @@ class Graph extends React.Component {
       nodesSizes: sizes,
       graphs,
       maxId
-    })
+    }, () => console.log(this.state))
   }
 
 
@@ -107,8 +126,8 @@ class Graph extends React.Component {
       showController: true
     },
     () => {
-      document.getElementById("nodeValue").value = this.state.nodesSizes[this.state.currentId - 1][node.index]
-      document.getElementById("nodeSize").value = this.state.nodesSizes[this.state.currentId - 1][node.index]
+      document.getElementById("nodeValue").value = this.state.nodesSizes[this.state.currentId - 1][node.id]
+      document.getElementById("nodeSize").value = this.state.nodesSizes[this.state.currentId - 1][node.id]
     }
     )
   }
@@ -122,18 +141,18 @@ class Graph extends React.Component {
     let elem = document.getElementById("3dgraph")
 
     console.log(sizes)
-    sizes[this.state.currentId - 1][node.index] = parseInt(size)
+    sizes[this.state.currentId - 1][node.id] = parseInt(size)
 
     let graph = <ForceGraph3D
       graphData={this.state.data[this.state.currentId]}
       nodeResolution={200}
       backgroundColor={"grey"}
-      nodeVal={(nod) => { return sizes[this.state.currentId - 1][nod.index] }}
+      nodeVal={nod => sizes[this.state.currentId - 1][nod.id] }
       nodeColor={() => this.state.colors[this.state.currentId - 1]}
       nodeLabel={"name"}
       onNodeClick={nod => this.setCurrentNode(nod)}
       onNodeHover={nod => elem.style.cursor = nod ? 'pointer' : null}
-      linkWidth={2}
+      linkWidth={link => 5*link.width}
       linkResolution={200}
       onLinkHover={link => elem.style.cursor = link ? 'pointer' : null} />
 
@@ -191,7 +210,7 @@ class Graph extends React.Component {
             hide={this.hideController.bind(this)}
             nodeSize={this.changeNodeSize}
             linkSize={this.changeLinkSize.bind(this)}
-            size={this.state.nodesSizes[this.state.currentId - 1][this.state.selectedNode.index]} />
+            size={this.state.nodesSizes[this.state.currentId - 1][this.state.selectedNode.id]} />
           : null}
 
         <div id="3dgraph">{this.state.graphs[this.state.currentId - 1]}</div>
