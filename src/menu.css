@@ -35,3 +35,11 @@ li .button-as-link{
     color: white;
     transition-duration: 300ms;
 }
+
+.scale-div{
+    margin-left: 5px;
+}
+
+.scale-div *{
+    margin-right: 5px;
+}

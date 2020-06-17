@@ -23,14 +23,20 @@ function Menu(props){
                     </li>
                 </ul>
                 {props.showPlayControls ? 
-                    <div className="playControler">
-                        <button onClick={() => props.resetMoments()}><i className="fa fa-fast-backward"></i></button>
-                        <button onClick={() => props.stepMoment(-1)}><i className="fa fa-step-backward"></i></button>
-                        <button onClick={() => props.playMoments()}><i className="fa fa-play"></i></button>
-                        <button onClick={() => props.pauseMoments()}><i className="fa fa-pause"></i></button>
-                        <button onClick={() => props.stepMoment(1)}><i className="fa fa-step-forward"></i></button>
-                        <button onClick={() => props.lastMoment()}><i className="fa fa-fast-forward"></i></button>
-                    </div>
+                    <React.Fragment>
+                        <div className="playControler">
+                            <button onClick={() => props.resetMoments()}><i className="fa fa-fast-backward"></i></button>
+                            <button onClick={() => props.stepMoment(-1)}><i className="fa fa-step-backward"></i></button>
+                            <button onClick={() => props.playMoments()}><i className="fa fa-play"></i></button>
+                            <button onClick={() => props.pauseMoments()}><i className="fa fa-pause"></i></button>
+                            <button onClick={() => props.stepMoment(1)}><i className="fa fa-step-forward"></i></button>
+                            <button onClick={() => props.lastMoment()}><i className="fa fa-fast-forward"></i></button>
+                        </div>
+                        <div className="scale-div">
+                            <label style={{display: "inline", color:"white"}}>Escalado</label>
+                            <input onChange={() => props.scaleCoordinates()} id="cooScale" defaultValue={1} style={{display: "inline"}} type="number" min={1} max={20}/>
+                        </div>
+                    </React.Fragment>
                     : null
                 }
             </div>

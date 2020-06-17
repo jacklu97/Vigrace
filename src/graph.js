@@ -19,6 +19,7 @@ class Graph extends React.Component {
     this.fgRef = React.createRef()
     this.state = {
       data: null,
+      scale: 1,
       showController: false,
       currentId: 1,
       minId: 1,
@@ -200,9 +201,39 @@ class Graph extends React.Component {
   }
 
   takeSnapshot = () =>{
+    if(!this.state.data){
+      alert("Es necesario cagar la información primero")
+      return
+    }
     $("#3dgraph canvas")[0].toBlob((blob) => {
       console.log(blob)
       saveAs(blob, "graph.jpeg")
+    })
+  }
+
+  scaleCoordinates = () =>{
+    let scale = document.getElementById("cooScale").value
+
+    if(scale < 1 || scale > 20){
+      alert("Escala fuera de rango")
+      return
+    }
+
+    let data = this.state.data
+    
+    for(let i=1; i<=this.state.maxId; i++){
+      data[i]["nodes"].forEach(node => {
+        node.fx /= this.state.scale
+        node.fy /= this.state.scale
+        node.fz /= this.state.scale
+        node.fx *= scale
+        node.fy *= scale
+        node.fz *= scale
+      })
+    }
+    
+    this.setState({
+      scale
     })
   }
 
@@ -282,6 +313,7 @@ class Graph extends React.Component {
           pauseMoments={this.pauseMoments.bind(this)}
           resetMoments = {this.resetMoments.bind(this) }
           stepMoment = {this.stepMoment.bind(this)}
+          scaleCoordinates = {this.scaleCoordinates.bind(this)}
           lastMoment = {this.lastMoment.bind(this)}/>
         <InputFile setJson={this.setJsonFile.bind(this)} />
         {
