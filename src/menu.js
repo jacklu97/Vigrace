@@ -17,7 +17,7 @@ function Menu(props){
                         </button>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <button onClick={() => props.uploadFile()} className="button-as-link actions">Cargar JSON</button>
-                            <button className="button-as-link actions">Capturar imagen</button>
+                            <button onClick={() => props.takeSnapshot()} className="button-as-link actions">Capturar imagen</button>
                             <button onClick={() => props.exit()} className="button-as-link actions">Salir</button>
                         </div>
                     </li>

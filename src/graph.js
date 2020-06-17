@@ -2,6 +2,7 @@
 import React from 'react'
 import ForceGraph3D from 'react-force-graph-3d';
 import SpriteText from 'three-spritetext';
+import { saveAs } from 'file-saver'
 import $ from 'jquery';
 import InputRange from 'react-input-range';
 import './App.css';
@@ -15,6 +16,7 @@ import InputFile from './inputFile';
 class Graph extends React.Component {
   constructor(props) {
     super(props)
+    this.fgRef = React.createRef()
     this.state = {
       data: null,
       showController: false,
@@ -87,6 +89,7 @@ class Graph extends React.Component {
       let graph = <ForceGraph3D
       graphData={this.state.data[i]}
       rendererConfig={{preserveDrawingBuffer: true}}
+      ref = {this.fgRef}
       nodeResolution={200}
       backgroundColor={"#919191"}
       nodeColor={() => color}
@@ -196,6 +199,13 @@ class Graph extends React.Component {
     })
   }
 
+  takeSnapshot = () =>{
+    $("#3dgraph canvas")[0].toBlob((blob) => {
+      console.log(blob)
+      saveAs(blob, "graph.jpeg")
+    })
+  }
+
    playMoments = () =>{
     this.setState({
       playMoments: true
@@ -231,7 +241,9 @@ class Graph extends React.Component {
 
   resetMoments = () =>{
     this.setState({
-      currentId: 1
+      currentId: 1,
+      playMoments: false,
+      pauseMoments: false
     })
   }
 
@@ -244,13 +256,17 @@ class Graph extends React.Component {
       currentId = 1
     }
     this.setState({
-      currentId: currentId
+      currentId: currentId,
+      playMoments: false,
+      pauseMoments: false
     })
   }
 
   lastMoment = () =>{
     this.setState({
-      currentId: this.state.maxId
+      currentId: this.state.maxId,
+      playMoments: false,
+      pauseMoments: false
     })
   }
 
@@ -261,6 +277,7 @@ class Graph extends React.Component {
           uploadFile={this.chooseJsonFile.bind(this)} 
           exit={this.props.exit} 
           showPlayControls={this.state.data ? true : false}
+          takeSnapshot = {this.takeSnapshot.bind(this)}
           playMoments={this.playMoments.bind(this)}
           pauseMoments={this.pauseMoments.bind(this)}
           resetMoments = {this.resetMoments.bind(this) }
