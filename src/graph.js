@@ -91,18 +91,21 @@ class Graph extends React.Component {
       graphData={this.state.data[i]}
       rendererConfig={{preserveDrawingBuffer: true}}
       ref = {this.fgRef}
-      nodeResolution={200}
+      nodeResolution={10}
       backgroundColor={"#919191"}
       nodeColor={() => color}
       nodeLabel={"name"}
       showNavInfo={true}
       width={WIDTH}
       height={HEIGHT}
+      linkDirectionalArrowLength={3.5}
+      linkDirectionalArrowRelPos={1}
+      linkCurvature={0.25}
       nodeVal={nod => sizes[this.state.currentId - 1][nod.id] }
       onNodeClick={node => this.setCurrentNode(node)}
       onNodeHover={node => elem.style.cursor = node ? 'pointer' : null}
       linkWidth={link => 5*link.width}
-      linkResolution={200}
+      linkResolution={10}
       onLinkHover={link => elem.style.cursor = link ? 'pointer' : null} 
       nodeThreeObjectExtend={nod => true}
       nodeThreeObject={(nod) => this.addSpriteText(nod)}/>
@@ -172,6 +175,9 @@ class Graph extends React.Component {
       onNodeHover={nod => elem.style.cursor = nod ? 'pointer' : null}
       linkWidth={link => 5*link.width}
       linkResolution={200}
+      linkDirectionalArrowLength={3.5}
+      linkDirectionalArrowRelPos={1}
+      linkCurvature={0.25}
       onLinkHover={link => elem.style.cursor = link ? 'pointer' : null} />
 
     graphs[this.state.currentId - 1] = graph
@@ -233,8 +239,10 @@ class Graph extends React.Component {
     }
     
     this.setState({
-      scale
-    })
+      scale,
+      data
+    }, () => this.fgRef.current.refresh())
+
   }
 
    playMoments = () =>{

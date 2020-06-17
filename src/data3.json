@@ -1,0 +1,890 @@
+{
+    "1": {
+        "nodes": [
+            {
+                "id": "FP2",
+                "name": "FP2",
+                "fx": "3.3556",
+                "fy": "9.82549",
+                "fz": "0.750687"
+            },
+            {
+                "id": "F4",
+                "name": "F4",
+                "fx": "4.72647",
+                "fy": "6.94583",
+                "fz": "4.29259"
+            },
+            {
+                "id": "C4",
+                "name": "C4",
+                "fx": "6.20327",
+                "fy": "0.279191",
+                "fz": "5.88833"
+            },
+            {
+                "id": "P4",
+                "name": "P4",
+                "fx": "4.81515",
+                "fy": "-6.89084",
+                "fz": "3.53716"
+            },
+            {
+                "id": "O2",
+                "name": "O2",
+                "fx": "2.84669",
+                "fy": "-9.16834",
+                "fz": "-1.3147"
+            },
+            {
+                "id": "F8",
+                "name": "F8",
+                "fx": "4.257",
+                "fy": "8.61151",
+                "fz": "2.77296"
+            },
+            {
+                "id": "T4",
+                "name": "T4",
+                "fx": "7.56327",
+                "fy": "0.234217",
+                "fz": "-1.09244"
+            },
+            {
+                "id": "T6",
+                "name": "T6",
+                "fx": "6.47645",
+                "fy": "-5.20816",
+                "fz": "-1.59903"
+            },
+            {
+                "id": "FZ",
+                "name": "FZ",
+                "fx": "0",
+                "fy": "3.89585",
+                "fz": "8.14682"
+            },
+            {
+                "id": "CZ",
+                "name": "CZ",
+                "fx": "0",
+                "fy": "0.86423",
+                "fz": "8.7"
+            },
+            {
+                "id": "PZ",
+                "name": "PZ",
+                "fx": "0",
+                "fy": "-5.62431",
+                "fz": "7.10652"
+            },
+            {
+                "id": "FP1",
+                "name": "FP1",
+                "fx": "-3.3556",
+                "fy": "9.82549",
+                "fz": "0.750687"
+            },
+            {
+                "id": "F3",
+                "name": "F3",
+                "fx": "-4.72647",
+                "fy": "6.94583",
+                "fz": "4.29259"
+            },
+            {
+                "id": "C3",
+                "name": "C3",
+                "fx": "-6.20327",
+                "fy": "0.279191",
+                "fz": "5.88833"
+            },
+            {
+                "id": "P3",
+                "name": "P3",
+                "fx": "-4.81515",
+                "fy": "-6.89084",
+                "fz": "3.53716"
+            },
+            {
+                "id": "O1",
+                "name": "O1",
+                "fx": "-2.84669",
+                "fy": "-9.16834",
+                "fz": "-1.3147"
+            },
+            {
+                "id": "F7",
+                "name": "F7",
+                "fx": "-4.257",
+                "fy": "8.61151",
+                "fz": "2.77296"
+            },
+            {
+                "id": "T3",
+                "name": "T3",
+                "fx": "-7.56327",
+                "fy": "0.234217",
+                "fz": "-1.09244"
+            },
+            {
+                "id": "T5",
+                "name": "T5",
+                "fx": "-6.47645",
+                "fy": "-5.20816",
+                "fz": "-1.59903"
+            }
+        ],
+        "links": [
+            {
+                "target": "FP2",
+                "source": "F4",
+                "width": 0.069921261
+            },
+            {
+                "target": "FP2",
+                "source": "F8",
+                "width": 1.0
+            },
+            {
+                "target": "FP2",
+                "source": "FZ",
+                "width": 0.024089154
+            },
+            {
+                "target": "FP2",
+                "source": "FP1",
+                "width": 0.019374458
+            },
+            {
+                "target": "FP2",
+                "source": "F3",
+                "width": 0.069615479
+            },
+            {
+                "target": "F4",
+                "source": "C4",
+                "width": 0.038609834
+            },
+            {
+                "target": "F4",
+                "source": "F8",
+                "width": 0.215577783
+            },
+            {
+                "target": "F4",
+                "source": "FZ",
+                "width": 0.092451365
+            },
+            {
+                "target": "F4",
+                "source": "CZ",
+                "width": 0.235226104
+            },
+            {
+                "target": "F4",
+                "source": "FP1",
+                "width": 0.105835676
+            },
+            {
+                "target": "F4",
+                "source": "F3",
+                "width": 0.22452707
+            },
+            {
+                "target": "F4",
+                "source": "C3",
+                "width": 0.74204172
+            },
+            {
+                "target": "F4",
+                "source": "P3",
+                "width": 0.789834474
+            },
+            {
+                "target": "C4",
+                "source": "P4",
+                "width": 0.854526872
+            },
+            {
+                "target": "C4",
+                "source": "F8",
+                "width": 0.864630415
+            },
+            {
+                "target": "C4",
+                "source": "T4",
+                "width": 0.726878928
+            },
+            {
+                "target": "C4",
+                "source": "T6",
+                "width": 0.078006365
+            },
+            {
+                "target": "C4",
+                "source": "FZ",
+                "width": 0.107185441
+            },
+            {
+                "target": "C4",
+                "source": "CZ",
+                "width": 0.320646
+            },
+            {
+                "target": "C4",
+                "source": "PZ",
+                "width": 0.817490098
+            },
+            {
+                "target": "C4",
+                "source": "C3",
+                "width": 0.876000157
+            },
+            {
+                "target": "C4",
+                "source": "P3",
+                "width": 0.789834474
+            },
+            {
+                "target": "P4",
+                "source": "O2",
+                "width": 0.052212146
+            },
+            {
+                "target": "P4",
+                "source": "T6",
+                "width": 0.346054263
+            },
+            {
+                "target": "P4",
+                "source": "FZ",
+                "width": 0.726961843
+            },
+            {
+                "target": "P4",
+                "source": "CZ",
+                "width": 0.295882848
+            },
+            {
+                "target": "P4",
+                "source": "PZ",
+                "width": 0.031156005
+            },
+            {
+                "target": "P4",
+                "source": "P3",
+                "width": 0.154282036
+            },
+            {
+                "target": "P4",
+                "source": "O1",
+                "width": 0.768529258
+            },
+            {
+                "target": "P4",
+                "source": "T5",
+                "width": 0.722347084
+            },
+            {
+                "target": "O2",
+                "source": "T6",
+                "width": 1.0
+            },
+            {
+                "target": "O2",
+                "source": "PZ",
+                "width": 0.752841216
+            },
+            {
+                "target": "O2",
+                "source": "O1",
+                "width": 0.005650879
+            },
+            {
+                "target": "F8",
+                "source": "T4",
+                "width": 0.871872259
+            },
+            {
+                "target": "F8",
+                "source": "FZ",
+                "width": 0.768307117
+            },
+            {
+                "target": "T4",
+                "source": "T6",
+                "width": 0.719785652
+            },
+            {
+                "target": "T6",
+                "source": "PZ",
+                "width": 0.840696314
+            },
+            {
+                "target": "FZ",
+                "source": "CZ",
+                "width": 0.165043946
+            },
+            {
+                "target": "FZ",
+                "source": "PZ",
+                "width": 0.741693462
+            },
+            {
+                "target": "FZ",
+                "source": "FP1",
+                "width": 0.033546772
+            },
+            {
+                "target": "FZ",
+                "source": "C3",
+                "width": 0.213779272
+            },
+            {
+                "target": "FZ",
+                "source": "F7",
+                "width": 0.827718541
+            },
+            {
+                "target": "CZ",
+                "source": "PZ",
+                "width": 0.281258516
+            },
+            {
+                "target": "CZ",
+                "source": "FP1",
+                "width": 0.78178765
+            },
+            {
+                "target": "CZ",
+                "source": "F3",
+                "width": 0.068683772
+            },
+            {
+                "target": "CZ",
+                "source": "C3",
+                "width": 0.394083629
+            },
+            {
+                "target": "CZ",
+                "source": "P3",
+                "width": 0.195777371
+            },
+            {
+                "target": "PZ",
+                "source": "C3",
+                "width": 0.00820283
+            },
+            {
+                "target": "PZ",
+                "source": "P3",
+                "width": 0.16996723
+            },
+            {
+                "target": "FP1",
+                "source": "F3",
+                "width": 0.087430066
+            },
+            {
+                "target": "FP1",
+                "source": "C3",
+                "width": 0.804084492
+            },
+            {
+                "target": "FP1",
+                "source": "F7",
+                "width": 0.295722329
+            },
+            {
+                "target": "F3",
+                "source": "C3",
+                "width": 0.33910645
+            },
+            {
+                "target": "F3",
+                "source": "F7",
+                "width": 0.094159223
+            },
+            {
+                "target": "C3",
+                "source": "P3",
+                "width": 0.156866357
+            },
+            {
+                "target": "C3",
+                "source": "T3",
+                "width": 0.037963715
+            },
+            {
+                "target": "C3",
+                "source": "T5",
+                "width": 0.800839168
+            },
+            {
+                "target": "P3",
+                "source": "O1",
+                "width": 0.118860812
+            },
+            {
+                "target": "P3",
+                "source": "T5",
+                "width": 0.103731093
+            },
+            {
+                "target": "O1",
+                "source": "T5",
+                "width": 0.179859841
+            },
+            {
+                "target": "F7",
+                "source": "T3",
+                "width": 0.101124587
+            }
+        ]
+    },
+    "2": {
+        "nodes": [
+            {
+                "id": "FP2",
+                "name": "FP2",
+                "fx": "3.3556",
+                "fy": "9.82549",
+                "fz": "0.750687"
+            },
+            {
+                "id": "F4",
+                "name": "F4",
+                "fx": "4.72647",
+                "fy": "6.94583",
+                "fz": "4.29259"
+            },
+            {
+                "id": "C4",
+                "name": "C4",
+                "fx": "6.20327",
+                "fy": "0.279191",
+                "fz": "5.88833"
+            },
+            {
+                "id": "P4",
+                "name": "P4",
+                "fx": "4.81515",
+                "fy": "-6.89084",
+                "fz": "3.53716"
+            },
+            {
+                "id": "O2",
+                "name": "O2",
+                "fx": "2.84669",
+                "fy": "-9.16834",
+                "fz": "-1.3147"
+            },
+            {
+                "id": "F8",
+                "name": "F8",
+                "fx": "4.257",
+                "fy": "8.61151",
+                "fz": "2.77296"
+            },
+            {
+                "id": "T4",
+                "name": "T4",
+                "fx": "7.56327",
+                "fy": "0.234217",
+                "fz": "-1.09244"
+            },
+            {
+                "id": "T6",
+                "name": "T6",
+                "fx": "6.47645",
+                "fy": "-5.20816",
+                "fz": "-1.59903"
+            },
+            {
+                "id": "FZ",
+                "name": "FZ",
+                "fx": "0",
+                "fy": "3.89585",
+                "fz": "8.14682"
+            },
+            {
+                "id": "CZ",
+                "name": "CZ",
+                "fx": "0",
+                "fy": "0.86423",
+                "fz": "8.7"
+            },
+            {
+                "id": "PZ",
+                "name": "PZ",
+                "fx": "0",
+                "fy": "-5.62431",
+                "fz": "7.10652"
+            },
+            {
+                "id": "FP1",
+                "name": "FP1",
+                "fx": "-3.3556",
+                "fy": "9.82549",
+                "fz": "0.750687"
+            },
+            {
+                "id": "F3",
+                "name": "F3",
+                "fx": "-4.72647",
+                "fy": "6.94583",
+                "fz": "4.29259"
+            },
+            {
+                "id": "C3",
+                "name": "C3",
+                "fx": "-6.20327",
+                "fy": "0.279191",
+                "fz": "5.88833"
+            },
+            {
+                "id": "P3",
+                "name": "P3",
+                "fx": "-4.81515",
+                "fy": "-6.89084",
+                "fz": "3.53716"
+            },
+            {
+                "id": "O1",
+                "name": "O1",
+                "fx": "-2.84669",
+                "fy": "-9.16834",
+                "fz": "-1.3147"
+            },
+            {
+                "id": "F7",
+                "name": "F7",
+                "fx": "-4.257",
+                "fy": "8.61151",
+                "fz": "2.77296"
+            },
+            {
+                "id": "T3",
+                "name": "T3",
+                "fx": "-7.56327",
+                "fy": "0.234217",
+                "fz": "-1.09244"
+            },
+            {
+                "id": "T5",
+                "name": "T5",
+                "fx": "-6.47645",
+                "fy": "-5.20816",
+                "fz": "-1.59903"
+            }
+        ],
+        "links": [
+            {
+                "target": "FP2",
+                "source": "F4",
+                "width": 0.069921261
+            },
+            {
+                "target": "FP2",
+                "source": "F8",
+                "width": 1.0
+            },
+            {
+                "target": "FP2",
+                "source": "FZ",
+                "width": 0.024089154
+            },
+            {
+                "target": "FP2",
+                "source": "FP1",
+                "width": 0.019374458
+            },
+            {
+                "target": "FP2",
+                "source": "F3",
+                "width": 0.069615479
+            },
+            {
+                "target": "F4",
+                "source": "C4",
+                "width": 0.038609834
+            },
+            {
+                "target": "F4",
+                "source": "F8",
+                "width": 0.215577783
+            },
+            {
+                "target": "F4",
+                "source": "FZ",
+                "width": 0.092451365
+            },
+            {
+                "target": "F4",
+                "source": "CZ",
+                "width": 0.235226104
+            },
+            {
+                "target": "F4",
+                "source": "FP1",
+                "width": 0.105835676
+            },
+            {
+                "target": "F4",
+                "source": "F3",
+                "width": 0.22452707
+            },
+            {
+                "target": "F4",
+                "source": "C3",
+                "width": 0.74204172
+            },
+            {
+                "target": "F4",
+                "source": "P3",
+                "width": 0.789834474
+            },
+            {
+                "target": "C4",
+                "source": "P4",
+                "width": 0.854526872
+            },
+            {
+                "target": "C4",
+                "source": "F8",
+                "width": 0.864630415
+            },
+            {
+                "target": "C4",
+                "source": "T4",
+                "width": 0.726878928
+            },
+            {
+                "target": "C4",
+                "source": "T6",
+                "width": 0.078006365
+            },
+            {
+                "target": "C4",
+                "source": "FZ",
+                "width": 0.107185441
+            },
+            {
+                "target": "C4",
+                "source": "CZ",
+                "width": 0.320646
+            },
+            {
+                "target": "C4",
+                "source": "PZ",
+                "width": 0.817490098
+            },
+            {
+                "target": "C4",
+                "source": "C3",
+                "width": 0.876000157
+            },
+            {
+                "target": "C4",
+                "source": "P3",
+                "width": 0.789834474
+            },
+            {
+                "target": "P4",
+                "source": "O2",
+                "width": 0.052212146
+            },
+            {
+                "target": "P4",
+                "source": "T6",
+                "width": 0.346054263
+            },
+            {
+                "target": "P4",
+                "source": "FZ",
+                "width": 0.726961843
+            },
+            {
+                "target": "P4",
+                "source": "CZ",
+                "width": 0.295882848
+            },
+            {
+                "target": "P4",
+                "source": "PZ",
+                "width": 0.031156005
+            },
+            {
+                "target": "P4",
+                "source": "P3",
+                "width": 0.154282036
+            },
+            {
+                "target": "P4",
+                "source": "O1",
+                "width": 0.768529258
+            },
+            {
+                "target": "P4",
+                "source": "T5",
+                "width": 0.722347084
+            },
+            {
+                "target": "O2",
+                "source": "T6",
+                "width": 1.0
+            },
+            {
+                "target": "O2",
+                "source": "PZ",
+                "width": 0.752841216
+            },
+            {
+                "target": "O2",
+                "source": "O1",
+                "width": 0.005650879
+            },
+            {
+                "target": "F8",
+                "source": "T4",
+                "width": 0.871872259
+            },
+            {
+                "target": "F8",
+                "source": "FZ",
+                "width": 0.768307117
+            },
+            {
+                "target": "T4",
+                "source": "T6",
+                "width": 0.719785652
+            },
+            {
+                "target": "T6",
+                "source": "PZ",
+                "width": 0.840696314
+            },
+            {
+                "target": "FZ",
+                "source": "CZ",
+                "width": 0.165043946
+            },
+            {
+                "target": "FZ",
+                "source": "PZ",
+                "width": 0.741693462
+            },
+            {
+                "target": "FZ",
+                "source": "FP1",
+                "width": 0.033546772
+            },
+            {
+                "target": "FZ",
+                "source": "C3",
+                "width": 0.213779272
+            },
+            {
+                "target": "FZ",
+                "source": "F7",
+                "width": 0.827718541
+            },
+            {
+                "target": "CZ",
+                "source": "PZ",
+                "width": 0.281258516
+            },
+            {
+                "target": "CZ",
+                "source": "FP1",
+                "width": 0.78178765
+            },
+            {
+                "target": "CZ",
+                "source": "F3",
+                "width": 0.068683772
+            },
+            {
+                "target": "CZ",
+                "source": "C3",
+                "width": 0.394083629
+            },
+            {
+                "target": "CZ",
+                "source": "P3",
+                "width": 0.195777371
+            },
+            {
+                "target": "PZ",
+                "source": "C3",
+                "width": 0.00820283
+            },
+            {
+                "target": "PZ",
+                "source": "P3",
+                "width": 0.16996723
+            },
+            {
+                "target": "FP1",
+                "source": "F3",
+                "width": 0.087430066
+            },
+            {
+                "target": "FP1",
+                "source": "C3",
+                "width": 0.804084492
+            },
+            {
+                "target": "FP1",
+                "source": "F7",
+                "width": 0.295722329
+            },
+            {
+                "target": "F3",
+                "source": "C3",
+                "width": 0.33910645
+            },
+            {
+                "target": "F3",
+                "source": "F7",
+                "width": 0.094159223
+            },
+            {
+                "target": "C3",
+                "source": "P3",
+                "width": 0.156866357
+            },
+            {
+                "target": "C3",
+                "source": "T3",
+                "width": 0.037963715
+            },
+            {
+                "target": "C3",
+                "source": "T5",
+                "width": 0.800839168
+            },
+            {
+                "target": "P3",
+                "source": "O1",
+                "width": 0.118860812
+            },
+            {
+                "target": "P3",
+                "source": "T5",
+                "width": 0.103731093
+            },
+            {
+                "target": "O1",
+                "source": "T5",
+                "width": 0.179859841
+            },
+            {
+                "target": "F7",
+                "source": "T3",
+                "width": 0.101124587
+            }
+        ]
+    }
+}
