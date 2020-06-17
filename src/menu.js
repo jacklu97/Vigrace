@@ -2,6 +2,14 @@ import React from 'react';
 
 import "./menu.css"
 
+/*
+    Este componente devuelve un navbar que usa estilos de bootstrap
+    Es un componente mayormente de html
+    Se encarga de tener la carga de json, tomar la foto y de salir del sistema
+    También tiene los controles de reproducción de los momentos y la escala
+    Todo método que diga props.algunMétodo() viene desde la invocación del componente de orden mayor
+*/
+
 function Menu(props){
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -22,7 +30,7 @@ function Menu(props){
                         </div>
                     </li>
                 </ul>
-                {props.showPlayControls ? 
+                {props.showPlayControls ? // Usando el operador ternario se puede ver si se debe o no mostrar los controles de reproducción y de escala
                     <React.Fragment>
                         <div className="playControler">
                             <button onClick={() => props.resetMoments()}><i className="fa fa-fast-backward"></i></button>

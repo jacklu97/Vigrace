@@ -1,5 +1,11 @@
 import React from 'react';
 
+/*
+    Este componente solo tiene la función de tener el control de los archivos que se suben mediante el menú de acciones
+    Usa FileReader de JS con los metodos de onloadend, una vez que carga se activa el método que se le proporciona por props llamado "setJson"
+    Ese método es el método "setJsonFile" que se encuentra en graph.js
+*/
+
 const InputFile = (props) =>{
     let fileReader;
 
