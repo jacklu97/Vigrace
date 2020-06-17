@@ -164,7 +164,7 @@ class Graph extends React.Component {
       graphData={this.state.data[this.state.currentId]}
       rendererConfig={{preserveDrawingBuffer: true}}
       nodeResolution={200}
-      backgroundColor={"grey"}
+      backgroundColor={"#919191"}
       nodeVal={nod => sizes[this.state.currentId - 1][nod.id] }
       nodeColor={() => this.state.colors[this.state.currentId - 1]}
       nodeLabel={"name"}
