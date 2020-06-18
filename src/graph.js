@@ -43,7 +43,8 @@ class Graph extends React.Component {
   setJsonFile = (jsonF) => { // Una vez que se ha elegido el archivo JSON se activa este método, carga la información del archivo a memoria en la variable data y dejamos currentID en 1
     this.setState({
       data: jsonF,
-      currentId: 1
+      currentId: 1,
+      scale: 1
     }, () => { // La función setState tiene un callback dado que es una función asíncrona de JS, para asegurarse que lo que se quiera hacer después de cambiar el estado se debe usar el callback
       this.createGraph() // Después de cargar la información en memoria se pasa a crear los grafos
     })
